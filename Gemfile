@@ -47,6 +47,7 @@ gem "bootsnap", require: false
 gem 'carrierwave', '~> 3.0'
 gem 'config', '~> 5.4'
 gem 'cssbundling-rails'
+gem 'dotenv-rails', '~>3.1.7'
 gem 'gretel', '~> 5.0'
 gem 'kaminari', '~> 1.1'
 gem 'rails-i18n', '~> 7.0.0'
