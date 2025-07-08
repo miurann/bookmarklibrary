@@ -15,7 +15,7 @@
   <% end %>
 
   <div class="dropdown dropdown-top dropdown-end<%= ' w-screen' unless logged_in? %> flex justify-end">
-    <div tabindex="0" role="button" class="m-1"><i class="fa-regular fa-circle-question fa-lg"></i></div>
+    <div tabindex="0" role="button" class="m-1"><i class="fa-solid fa-circle-exclamation"></i></div>
     <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
       <li><%= link_to t('defaults.terms'), terms_path %></li>
       <li><%= link_to t('defaults.privacy_policy'), privacy_policy_path %></li>
