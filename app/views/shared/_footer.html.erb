@@ -1,11 +1,23 @@
-<% if logged_in? %>
+
   <div class="drawer drawer-end">
     <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content">
-<% end %>
+
 <!-- Footer content -->
 
 <footer class="footer footer-center flex flex-row p-4 bg-base-300 text-base-content fixed bottom-0 h-16 z-40 opacity-75 hover:opacity-100">
+  <% unless logged_in? %>
+    <div class="w-full flex justify-start">
+      <p>Copyright © 2025 - mNon</p>
+    </div>
+    <div class="flex w-full justify-end">
+      <ul class="flex flex-row">
+        <li class="mr-2 link link-hover"><%= link_to t('defaults.terms'), terms_path %></li>
+        <li class="mr-2 link link-hover"><%= link_to t('defaults.privacy_policy'), privacy_policy_path %></li>
+        <li class="mr-2 link link-hover"><%= link_to t('defaults.contact'), 'https://forms.gle/evSwndJ5hDVbDC4W7', target: '_blank' %></li>
+      </ul>
+    </div>
+  <% end %>
   <% if logged_in? %>
     <div class="flex flex-row mx-auto justify-center opacity-100">
       <%= render 'bookmarks/search_form', url: bookmarks_path %>
@@ -13,15 +25,6 @@
     </div>
   </div>
   <% end %>
-
-  <div class="dropdown dropdown-top dropdown-end<%= ' w-screen' unless logged_in? %> flex justify-end">
-    <div tabindex="0" role="button" class="m-1"><i class="fa-solid fa-circle-exclamation"></i></div>
-    <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-      <li><%= link_to t('defaults.terms'), terms_path %></li>
-      <li><%= link_to t('defaults.privacy_policy'), privacy_policy_path %></li>
-      <li><%= t('defaults.contact') %>(準備中)</li>
-    </ul>
-  </div>
 </footer>
 
 <!-- Right drawer content -->

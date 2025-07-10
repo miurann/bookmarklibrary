@@ -22,6 +22,9 @@
             <li><%= link_to t('bookmarks.index.title'), bookmarks_path %></li>
             <li><%= link_to t('tags.index.title'), tags_path %></li>
             <li><%= link_to t('profiles.show.title'), profile_path %></li>
+            <li><%= link_to t('defaults.terms'), terms_path %></li>
+            <li><%= link_to t('defaults.privacy_policy'), privacy_policy_path %></li>
+            <li><%= link_to t('defaults.contact'), 'https://forms.gle/evSwndJ5hDVbDC4W7', target: '_blank' %></li>
             <li><%= button_to t('defaults.logout'), :logout, method: :delete %></li>
           </ul>
       </div>
