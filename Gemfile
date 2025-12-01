@@ -61,6 +61,7 @@ group :development, :test do
   gem 'faker', '~> 3.2'
   gem 'letter_opener_web', '~> 2.0'
   gem 'rspec-rails', '~> 6.1.5'
+  gem 'factory_bot_rails', '~> 6.5.1'
 end
 
 group :development do
