@@ -75,4 +75,9 @@ group :development do
   # gem "spring"
 end
 
+group :test do
+  gem 'capybara', '~> 3.40'
+  gem 'launchy', '~> 3.1.1'
+end
+
 gem "dockerfile-rails", ">= 1.6", :group => :development
